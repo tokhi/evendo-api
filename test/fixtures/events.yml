@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ogranization_id: 
+  title: MyString
+  event_date: 2015-07-28
+  location: MyString
+  seat_nums: 1
+  price: MyString
+  description: MyString
+  custom_fields: MyString
+
+two:
+  ogranization_id: 
+  title: MyString
+  event_date: 2015-07-28
+  location: MyString
+  seat_nums: 1
+  price: MyString
+  description: MyString
+  custom_fields: MyString
