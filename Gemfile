@@ -10,6 +10,10 @@ gem 'spring', :group => :development
 
 gem 'sqlite3'
 
+# Use Capistrano for deployment
+gem 'capistrano-rails', '~> 1.1.3', group: :development
+gem 'capistrano-rvm'
+
 
 
 # To use ActiveModel has_secure_password
