@@ -6,5 +6,6 @@
 end
 
 1.upto(10) do |index|
-    Event.create(title: "cool event #{Random.rand(1000)}", ogranization_id: index, event_date: Date.today , location: "Postdam, Gribnitzee str #{index}", seat_nums: 30, price: "20 Eur") 
+    Event.create(title: "cool event #{Random.rand(1000)}", ogranization_id: index, event_date: Date.today , location: "Postdam, Gribnitzee str #{index}", seat_nums: 30, price: "#{Random.rand(100)} Eur", 
+    	category: "Movies") 
 end
