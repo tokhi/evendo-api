@@ -23,7 +23,7 @@ csv.each do |row|
   # Event.create!(row.to_hash)
   @video =  VideoInfo.new(row[1])
 
-  Event.create(title: @video.title, description: @video.description, ogranization_id: 1, event_date: Date.today , location: "Potsdamer Straße 5, 10785 Berlin", seat_nums: 100, price: "15 Eur", 
+  Event.create(title: @video.title, description: @video.description, ogranization_id: 1, event_date: Date.parse("2015-10-13"), location: "Potsdamer Straße 5, 10785 Berlin", seat_nums: 100, price: "15 Eur", 
     	category: "Movie", thumbnail: @video.thumbnail_medium, link: row[1]) 
 end
 
@@ -31,7 +31,7 @@ end
 Event.all.each do |e|
   if e.id > 15
   	e.ogranization_id = 2
-  	e.address = "Potsdamer Straße 4, 10785 Berlin"
+  	e.location = "Potsdamer Straße 4, 10785 Berlin"
   	e.save
   end
 end
