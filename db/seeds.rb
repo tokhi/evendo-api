@@ -6,7 +6,7 @@ require 'net/http'
 	Organization.create(name: "CinemaxX", country: "Germany", 
 		city: "Berlin", address: "Potsdamer Straße 5, 10785 Berlin", telephone: "+49 40 80806969", email: "info@cinemaxx.de", category: "cinema")	
 
-	Organization.create(name: "CinemaxX", country: "Germany", 
+	Organization.create(name: "CineStar Berlin & IMAX", country: "Germany", 
 		city: "Berlin", address: "Potsdamer Straße 4, 10785 Berlin", telephone: "+49 30 26066400", email: "info@imax.com", category: "cinema")	
 # end
 
