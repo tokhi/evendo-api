@@ -31,6 +31,7 @@ end
 Event.all.each do |e|
   if e.id > 15
   	e.ogranization_id = 2
+  	e.address = "Potsdamer Straße 4, 10785 Berlin"
   	e.save
   end
 end
