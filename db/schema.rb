@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804111312) do
+ActiveRecord::Schema.define(version: 20150807155207) do
 
   create_table "events", force: :cascade do |t|
     t.integer  "ogranization_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20150804111312) do
     t.string   "category"
     t.string   "thumbnail"
     t.string   "link"
+    t.string   "rating"
   end
 
   add_index "events", ["ogranization_id"], name: "index_events_on_ogranization_id"
