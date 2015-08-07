@@ -22,9 +22,13 @@ VideoInfo.provider_api_keys = { youtube:  'AIzaSyDtkGT4YUI3UfTSHqMmkx-S-NtyueGjh
 csv.each do |row|
   # Event.create!(row.to_hash)
   @video =  VideoInfo.new(row[1])
-
-  Event.create(title: @video.title, description: @video.description, ogranization_id: 1, event_date: Date.parse("2015-10-13"), location: "Potsdamer Straße 5, 10785 Berlin", seat_nums: 100, price: "15 Eur", 
-    	category: "Movie", thumbnail: @video.thumbnail_medium, link: row[1]) 
+  if(@video.title.downcase.include? "trailer")
+    tIndex = @video.title.downcase.index("trailer")+6
+  else
+    tIndex=50
+  end
+  Event.create(title: @video.title[0..tIndex], description: @video.description, ogranization_id: 1, event_date: Date.parse("2015-10-13"), location: "Potsdamer Straße 5, 10785 Berlin", seat_nums: 100, price: "15 Eur", 
+    	category: "Movie", thumbnail: @video.thumbnail_medium, link: row[1], rating: "5", custom_fields: {"movieLength"=>"2 hours","PG"=>16,"Genre"=>"Action, thriller"}) 
 end
 
 # change movie's cinema
