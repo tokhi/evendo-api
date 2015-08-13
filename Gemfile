@@ -14,7 +14,7 @@ gem 'sqlite3'
 gem 'capistrano-rails', '~> 1.1.3', group: :development
 gem 'capistrano-rvm'
 gem 'video_info', :git => 'https://github.com/thibaudgg/video_info.git'
-
+gem 'rack-offline'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

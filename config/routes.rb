@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :events, except: [:new, :edit]
   resources :organizations, except: [:new, :edit]
+  get "/application.manifest" => Rails::Offline
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
