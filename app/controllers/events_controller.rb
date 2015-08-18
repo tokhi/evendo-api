@@ -1,11 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
+  has_scope :by_title #, :using => [:title], :type => :hash
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
-
+    # @events = Event.all
+     @events = apply_scopes(Event).all
     render json: @events
   end
 
@@ -47,12 +48,7 @@ class EventsController < ApplicationController
     head :no_content
   end
 
-  # Search event
-  def search
-    @events = Event.filter(params.slice(:start_with))
-    puts @events
-  end
-
+  
   private
 
     def set_event
