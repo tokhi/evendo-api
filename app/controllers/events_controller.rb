@@ -47,6 +47,12 @@ class EventsController < ApplicationController
     head :no_content
   end
 
+  # Search event
+  def search
+    @events = Event.filter(params.slice(:start_with))
+    puts @events
+  end
+
   private
 
     def set_event
