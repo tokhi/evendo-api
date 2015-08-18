@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     # @events = Event.all
-     @events = apply_scopes(Event).all
+    @events = apply_scopes(Event).all
     render json: @events
   end
 
@@ -48,14 +48,14 @@ class EventsController < ApplicationController
     head :no_content
   end
 
-  
+
   private
 
-    def set_event
-      @event = Event.find(params[:id])
-    end
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    def event_params
-      params.require(:event).permit(:ogranization_id, :title, :event_date, :location, :seat_nums, :price, :description, :custom_fields)
-    end
+  def event_params
+    params.require(:event).permit(:ogranization_id, :title, :event_date, :location, :seat_nums, :price, :description, :custom_fields)
+  end
 end
