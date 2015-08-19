@@ -26,6 +26,7 @@ describe EventsController, :type => :controller  do
     build(3)
     get :index, {org_id: 1}
     expect(assigns(:events).count).to eq(1)
+    expect(assigns(:events).count).not_to eq(3)
     get :index, {org_id: 2}
     expect(assigns(:events).count).to eq(1)
   end
