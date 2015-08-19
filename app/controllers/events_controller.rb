@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
-  has_scope :by_title #, :using => [:title], :type => :hash
+  has_scope :by_title
+  has_scope :org_id
 
   # GET /events
   # GET /events.json
