@@ -16,6 +16,10 @@ require 'net/http'
 # end
  
 
+def time_range
+ time_table = {"08:00"=>0,"09:00"=>0,"10:00"=>0,"11:00"=>0,"12:00"=>0,"13:00"=>1,"14:00"=>0,"15:00"=>1,"16:00"=>1,"17:00"=>0,"18:00"=>1,"19:00"=>1,"19:00"=>1,"19:00"=>0,"19:00"=>1,"19:00"=>1,"19:00"=>0}
+end
+
 csv_text = File.read('public/trailers.csv')
 csv = CSV.parse(csv_text, :headers => true)
 VideoInfo.provider_api_keys = { youtube:  'AIzaSyDtkGT4YUI3UfTSHqMmkx-S-NtyueGjhRI' }
@@ -28,7 +32,7 @@ csv.each do |row|
     tIndex=50
   end
   Event.create(title: @video.title[0..tIndex], description: @video.description, ogranization_id: 1, event_date: Date.parse("2015-10-13"), location: "Potsdamer Straße 5, 10785 Berlin", seat_nums: 100, price: "15 Eur", 
-    	category: "Movie", thumbnail: @video.thumbnail_medium, link: row[1], rating: "5", custom_fields: {"movieLength"=>"2 hours","PG"=>16,"Genre"=>"Action, thriller"}) 
+    	category: "Movie", thumbnail: @video.thumbnail_medium, link: row[1], rating: "5", custom_fields: {"movieLength"=>"2 hours","PG"=>16,"Genre"=>"Action, thriller", "TimeSchedual"=> time_range}) 
 end
 
 # change movie's cinema
