@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.2.1'
 
+#gem 'rails', '4.2.1'
+gem 'rails', '4.2.3'
 gem 'rails-api'
 
 gem 'spring', :group => :development
@@ -16,7 +17,7 @@ gem 'capistrano-rvm'
 gem 'video_info', :git => 'https://github.com/thibaudgg/video_info.git'
 gem 'rack-offline'
 gem 'has_scope'
-
+gem 'google_movies'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
