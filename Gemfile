@@ -17,7 +17,13 @@ gem 'capistrano-rvm'
 gem 'video_info', :git => 'https://github.com/thibaudgg/video_info.git'
 gem 'rack-offline'
 gem 'has_scope'
-gem 'google_movies'
+#gem 'google_movies', :path => "/Users/stokhi/Documents/shafi/movies2" #google_movies"
+gem 'google_movies' , github: "hu-cs/google_movies"
+#gem 'google_movies' #, github: "pedroandrade/google_movies"
+gem 'yourub'
+# regular background jobs
+gem "rufus-scheduler"
+#gem 'imdb'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
