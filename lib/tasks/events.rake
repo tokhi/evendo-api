@@ -1,5 +1,5 @@
 namespace :events do
-  desc "This task will "
+  desc "This task will sync the events with google movies api "
   task sync: :environment do
     client = GoogleMovies::Client.new("berlin")
     client.movies_theaters.each do |theater|
@@ -11,6 +11,11 @@ namespace :events do
         event = Event.where(title: movie.name.encode('iso-8859-1').encode('utf-8'))
         if event.empty?
           event = Event.new
+	  event.event_date = Time.now
+	  event.seat_nums = Random.rand(15..32)
+	  event.location = org[0].address
+	  event.category = "N/A"
+	  event.rating = Random.rand(2..5)
           event.title = movie.name.encode('iso-8859-1').encode('utf-8')
           Rails.logger.info "~> #{event.title} "
           Rails.logger.flush
