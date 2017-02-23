@@ -48,9 +48,10 @@ GET /events
 }
 ]
 ```
-You can change the location in lib/tasks/events.rake:
+You can change the location:
 
 ```ruby
+# lib/tasks/events.rake
 client = GoogleMovies::Client.new("berlin")
 ```
 
