@@ -36,8 +36,10 @@ gem "rufus-scheduler"
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development
 
+gem 'minitest-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 group :development, :test do
   gem 'rspec-rails', '~> 3.3'
+  gem 'minitest-rails-capybara'
 end

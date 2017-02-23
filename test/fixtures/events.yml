@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ogranization_id: 
-  title: MyString
+  ogranization_id: 1
+  title: Event Title One 
   event_date: 2015-07-28
-  location: MyString
+  location: Berlin
   seat_nums: 1
-  price: MyString
+  price: 30$
   description: MyString
   custom_fields: MyString
 
 two:
-  ogranization_id: 
-  title: MyString
+  ogranization_id: 1 
+  title: Event Title Two
   event_date: 2015-07-28
-  location: MyString
+  location: Hamburg
   seat_nums: 1
-  price: MyString
+  price: 20$
   description: MyString
   custom_fields: MyString
